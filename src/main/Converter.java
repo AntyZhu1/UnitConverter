@@ -21,13 +21,13 @@ public class Converter {
 	}
 	public static  double convertFahrenheitToCelcius(double fahToConvert) {
 		System.out.println("Converting Fahrenheit to Celcius");
-		double convertedNumber = ((fahToConvert - 32.0) * 5/9);
+		double convertedNumber = ((fahToConvert - 32.0) * 5.0/9.0);
 		System.out.println(fahToConvert + " Degrees Fahrenheit is equal to " + convertedNumber + " Degrees Celcius");
 		return convertedNumber;
 	}
 	public static double convertCelciusToFahrenheit(double celcToConvert) {
 		System.out.println("Converting Cekcuys to Fahrenheit");
-		double convertedNumber = ((celcToConvert * 9/5) + 32.0);
+		double convertedNumber = ((celcToConvert * 9.0/5.0) + 32.0);
 		System.out.println(celcToConvert + " Degrees Celcius is equal to " + convertedNumber + " Degrees Fahrenheit");
 		return convertedNumber;
 	}
