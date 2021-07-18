@@ -2,49 +2,56 @@ package main;
 import java.util.Scanner;
 
 public class Converter {
-
-	public Converter() {
-		
-	}
 	
+	//Miles to Kilometers
 	public static double convertMilesToKilometers(double milesToConvert) {
 		System.out.println("Converting Miles to Kilometers");
 		double convertedNumber = (milesToConvert * 1.60934);
 		System.out.println(milesToConvert + " Miles is equal to " + convertedNumber + " Kilometers");
 		return convertedNumber;
 	}
+	
+	//Kilometers to Miles
 	public static  double convertKilometersToMiles(double kilometersToConvert) {
 		System.out.println("Converting Miles to Kilometers");
 		double convertedNumber = (kilometersToConvert * 0.621371);
 		System.out.println(kilometersToConvert + " Kilometers is equal to " + convertedNumber + " Miles");
 		return convertedNumber;
 	}
+	
+	//F to C
 	public static  double convertFahrenheitToCelcius(double fahToConvert) {
 		System.out.println("Converting Fahrenheit to Celcius");
 		double convertedNumber = ((fahToConvert - 32.0) * 5.0/9.0);
 		System.out.println(fahToConvert + " Degrees Fahrenheit is equal to " + convertedNumber + " Degrees Celcius");
 		return convertedNumber;
 	}
+	
+	//C to F
 	public static double convertCelciusToFahrenheit(double celcToConvert) {
 		System.out.println("Converting Cekcuys to Fahrenheit");
 		double convertedNumber = ((celcToConvert * 9.0/5.0) + 32.0);
 		System.out.println(celcToConvert + " Degrees Celcius is equal to " + convertedNumber + " Degrees Fahrenheit");
 		return convertedNumber;
 	}
+	
+	//lbs to Kg
 	public static double convertPoundstoKilograms(double poundsToConvert) {
 		System.out.println("Converting Pounds to Kilograms");
 		double convertedNumber = (poundsToConvert * 0.453592);
 		System.out.println(poundsToConvert + "lbs is equal to " + convertedNumber + "kg");
 		return convertedNumber;
 	}
+	//Kg to lbs
 	public static double convertKilogramsToPounds(double kilogramsToConvert) {
 		System.out.println("Converting Kilograms to Pounds");
 		double convertedNumber = (kilogramsToConvert * 2.20462);
 		System.out.println(kilogramsToConvert + "kg is equal to " + convertedNumber + "lbs");
 		return convertedNumber;
 	}
+	
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int menuSelection;
 		System.out.println("Select the conversion you would like:");
 		System.out.println("");
@@ -55,6 +62,7 @@ public class Converter {
 		System.out.println("5. Pounds to Kilograms");
 		System.out.println("6. Kilograms to Pounds");
 		System.out.println("0. Quit Program");
+		System.out.println("");
 		Scanner userIn = new Scanner(System.in);
 		try {
 			boolean isQuitting = false;
@@ -66,9 +74,11 @@ public class Converter {
 				}
 				else {
 					switch (menuSelection) {
+					
 						case 0: System.out.println("Quitting...");
 								isQuitting = true;
 								break;
+								
 						case 1: System.out.println("Miles to Kilometers Selected!");
 								System.out.println("Please input miles to be converted.");
 								Scanner userMiles = new Scanner(System.in);
@@ -113,6 +123,7 @@ public class Converter {
 
 					}
 				}
+				
 				if (isQuitting == false) {
 					System.out.println("");
 					System.out.println("Select next option");
@@ -123,12 +134,15 @@ public class Converter {
 					System.out.println("5. Pounds to Kilograms");
 					System.out.println("6. Kilograms to Pounds");
 					System.out.println("0. Quit Program");
+					System.out.println("");
 				}
 			}
+			
 			userIn.close();
 			System.out.println("Thanks for Using my Converter!");
 			System.exit(1);
 		}
+		
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Invalid Option, Converter is Exiting");
