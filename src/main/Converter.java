@@ -69,7 +69,7 @@ public class Converter {
 			while (isQuitting == false) {
 				menuSelection = userIn.nextInt();
 				System.out.println("You have selected option: " + menuSelection);
-				if (menuSelection > 6) {
+				if (menuSelection > 6 | menuSelection < 0) {
 					System.out.println("Option does not exist, please select another option:");
 				}
 				else {
